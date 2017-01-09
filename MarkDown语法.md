@@ -160,7 +160,7 @@ https://github.com/LancerSung/Learning-Pratice/blob/master/images/%E5%A4%A7%E5%9
 ###链接本仓库里的URL
 |语法|效果|
 |----|-----
-|`[我的简介]|(./readme.md)`|[我的简介](./readme.md)
+|`[我的简介]|(./README.md)`|[我的简介](./README.md)
 
 
 ###图片链接
