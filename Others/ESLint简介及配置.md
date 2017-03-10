@@ -56,24 +56,24 @@ $ npm init
 ```javascript
 $ npm install eslint --save-dev
 ```    
-紧接着需要设置一个配置文件    
+紧接着需要设置一个配置文件  
 ```javascript
 $ ./node_modules/.bin/eslint --init
-```    
-配置成功后如下图所示    
+```  
+配置成功后如下图所示  
 
-![.eslintrc.js]()    
+![.eslintrc.js]()  
 
-之后，就可以在任何文件或目录运行ESLint    
+之后，就可以在任何文件或目录运行ESLint  
 ```javascript
 $ ./node_modules/.bin/eslint yourfile.js
-```    
-如下图所示  
+```  
+如下图所示    
 
-![runESLint]()  
+![runESLint]()     
 
-**注意**：使用本地安装的ESLint时，你使用的任何插件或可分享的配置也都必须在本地安装    
-**注意**：.eslintrc 放在项目根目录，则会应用到整个项目；如果子目录中也包含 .eslintrc 文件，则子目录会忽略根目录的配置文件，应用该目录中的配置文件。这样可以方便地对不同环境的代码应用不同的规则    
+**注意**：使用本地安装的ESLint时，你使用的任何插件或可分享的配置也都必须在本地安装      
+**注意**：.eslintrc 放在项目根目录，则会应用到整个项目；如果子目录中也包含 .eslintrc 文件，则子目录会忽略根目录的配置文件，应用该目录中的配置文件。这样可以方便地对不同环境的代码应用不同的规则      
 
 <h3 id="2.2">全局安装</h3>
 
