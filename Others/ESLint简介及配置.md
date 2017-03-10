@@ -1,5 +1,35 @@
 <h1>ESLint简介及配置</h1>
 
+<h2>目录</h2>
+
+- [1 简介](#1)    
+
+- [2 ESLint安装](#2)    
+
+  - [2.1 本地安装](#2.1)    
+  
+  - [2.2 全局安装](#2.2)    
+  
+- [3 ESLint使用](#3)    
+
+  - [3.1 自定义配置ESLint](#3.1)    
+  
+    - [3.1.1 parserOptions](#3.1.1)    
+    
+    - [3.1.2 parser](#3.1.2)    
+    
+    - [3.1.3 environments](#3.1.3)    
+    
+    - [3.1.4 globals](#3.1.4)    
+    
+    - [3.1.5 plugins](#3.1.5)    
+    
+    - [3.1.6 rules](#3.1.6)    
+    
+  - [3.2 ESLint在IDEA中的使用](#3.2)    
+  
+- [4 ESLint规则配置示例](#4)    
+
 <h2 id="1">1 简介</h2>
 
 ESLint最初是由Nicholas C. Zakas 于2013年6月创建的开源项目。它的目标是提供一个插件化的javascript代码检测工具，ESLint是一个QA工具，用来避免低级错误和统一代码的风格。ESLint被设计为完全可配置的，主要有两种方式来配置ESLint  
@@ -248,7 +278,7 @@ ESLint支持使用第三方插件，在使用插件之前，必须使用npm对�
 
 <h4 id="3.1.6">3.1.6 rules（配置规则）</h4>
 
-更多规则请查看[ESLint-rules](http://eslint.cn/docs/rules/ "ESLint-rules")        
+更多规则请查看[ESLint-rules](http://eslint.cn/docs/rules/ "ESLint-rules")    
 自定义规则，一般格式："规则名称":error级别系数。系数0为不提示(off)、1为警告(warn)、2为错误抛出(error)，可指定范围，可以包括Strict模式、也可以是code的方式提醒，如符号等。还可以是第三方的校验，如react    
 ```javascript
 {
@@ -280,7 +310,7 @@ ESLint支持使用第三方插件，在使用插件之前，必须使用npm对�
 
 <h3 id="3.2">3.2 ESLint在IDEA中的使用</h3>
 
-IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.com/plugin/7494-eslint "ESLint-plugin-for-IDEA")
+IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.com/plugin/7494-eslint "ESLint-plugin-for-IDEA")    
 如果直接使用命令窗口运行ESLint对js文件进行代码规范的检查，结果输出在命令窗口内，不方便代码的检查及修改，也不方便在开发过程中实时对代码的规范性进行验证。现在很多编译器均支持使用ESLint，下面以IDEA为例    
 打开IDEA的File-->Setting选项    
 
@@ -537,7 +567,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //要求或禁止"Yoda"条件
         "yoda": [2, "never"],
         //要求或禁止使用严格模式指令
-        "strict": 0,
+        "strict": 2,
 
         ////////////////////////////////////////////
         //变量声明
