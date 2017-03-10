@@ -248,7 +248,8 @@ ESLint支持使用第三方插件，在使用插件之前，必须使用npm对�
 
 <h4 id="3.1.6">3.1.6 rules（配置规则）</h4>
 
-自定义规则，一般格式："规则名称":error级别系数。系数0为不提示(off)、1为警告(warn)、2为错误抛出(error)，可指定范围，可以包括Strict模式、也可以是code的方式提醒，如符号等。还可以是第三方的校验，如react    
+更多规则请查看[ESLint-rules](http://eslint.cn/docs/rules/ "ESLint-rules")        
+自定义规则，一般格式："规则名称":error级别系数。系数0为不提示(off)、1为警告(warn)、2为错误抛出(error)，可指定范围，可以包括Strict模式、也可以是code的方式提醒，如符号等。还可以是第三方的校验，如react    
 ```javascript
 {
     "plugins": [
@@ -279,6 +280,7 @@ ESLint支持使用第三方插件，在使用插件之前，必须使用npm对�
 
 <h3 id="3.2">3.2 ESLint在IDEA中的使用</h3>
 
+IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.com/plugin/7494-eslint "ESLint-plugin-for-IDEA")
 如果直接使用命令窗口运行ESLint对js文件进行代码规范的检查，结果输出在命令窗口内，不方便代码的检查及修改，也不方便在开发过程中实时对代码的规范性进行验证。现在很多编译器均支持使用ESLint，下面以IDEA为例    
 打开IDEA的File-->Setting选项    
 
