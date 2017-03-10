@@ -467,7 +467,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //不允许在case子句中使用词法声明
         "no-case-declarations": 2,
         //禁止除法操作符显式的出现在正则表达式开始的未知
-        "no-dive-regex": 2,
+        "no-div-regex": 2,
         //禁止if语句中有return之后有else
         "no-else-return": 0,
         //禁止出现空函数，如果一个函数包含了一条注释，它将不会被认为有问题
@@ -501,7 +501,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //禁用标签语句
         "no-labels": 2,
         //禁用不必要的嵌套块
-        "no-long-blocks": 2,
+        "no-lone-blocks": 2,
         //禁止在循环中出现function声明和表达式
         "no-loop-func": 1,
         //禁用幻数（魔术数字，例如3.14应用常量代替使用，不能直接使用）
@@ -557,7 +557,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //禁止在注释中使用特定的警告术语
         "no-warning-comments": 0,
         //禁用width语句
-        "no-width": 2,
+        "no-with": 2,
         //强制在parseInt()使用基数参数
         "radix": 2,
         //要求所有的var声明出现在它们所在的作用域顶部
