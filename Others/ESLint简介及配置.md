@@ -655,8 +655,8 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         "max-len": [1, 120],
         //强制最大行数
         "max-lines": 0,
-        //强制function定义中最多允许的参数数量（最多允许6个参数）
-        "max-params": [1, 6],
+        //强制function定义中最多允许的参数数量（最多允许2个参数）
+        "max-params": [1, 2],
         //强制function块中最多允许的语句数量
         "max-statements": [1, 200],
         //强制每一行中所允许的最大语句数量
