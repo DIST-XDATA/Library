@@ -50,7 +50,7 @@ $ npm init
 ```    
 配置成功后如下图所示    
 
-![package.json]()    
+![package.json](https://github.com/DIST-XDATA/Library/blob/master/Others/img/package.json.png)    
 
 如果你想让ESLint成为项目构建系统的一部分，建议在本地安装。可以使用npm  
 ```javascript
@@ -62,7 +62,7 @@ $ ./node_modules/.bin/eslint --init
 ```  
 配置成功后如下图所示  
 
-![.eslintrc.js]()  
+![.eslintrc.js](https://github.com/DIST-XDATA/Library/blob/master/Others/img/.eslintrc.js.png)  
 
 之后，就可以在任何文件或目录运行ESLint  
 ```javascript
@@ -70,7 +70,7 @@ $ ./node_modules/.bin/eslint yourfile.js
 ```  
 如下图所示    
 
-![ESLint-run]()     
+![ESLint-run](https://github.com/DIST-XDATA/Library/blob/master/Others/img/ESLint-run.png)     
 
 **注意**：使用本地安装的ESLint时，你使用的任何插件或可分享的配置也都必须在本地安装      
 **注意**：.eslintrc 放在项目根目录，则会应用到整个项目；如果子目录中也包含 .eslintrc 文件，则子目录会忽略根目录的配置文件，应用该目录中的配置文件。这样可以方便地对不同环境的代码应用不同的规则      
@@ -282,15 +282,15 @@ ESLint支持使用第三方插件，在使用插件之前，必须使用npm对�
 如果直接使用命令窗口运行ESLint对js文件进行代码规范的检查，结果输出在命令窗口内，不方便代码的检查及修改，也不方便在开发过程中实时对代码的规范性进行验证。现在很多编译器均支持使用ESLint，下面以IDEA为例    
 打开IDEA的File-->Setting选项    
 
-![Setting]()    
+![setting](https://github.com/DIST-XDATA/Library/blob/master/Others/img/setting.png)    
 
 弹出Setting对话框，对ESLint进行配置    
 
-![ESLint-setting]()    
+![ESLint-setting](https://github.com/DIST-XDATA/Library/blob/master/Others/img/ESLint-setting.png)    
 
 成功后效果如下所示    
 
-![ESLint-result]()    
+![ESLint-result](https://github.com/DIST-XDATA/Library/blob/master/Others/img/ESLint-result.png)    
 
 <h2 id="4">4 ESLint规则配置示例</h2>
 
