@@ -620,8 +620,8 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //以方括号取对象属性时，[后面和]前面是否需要空格，可选参数never，always
         "computed-property-spacing": [2, "never"],
         //用于指统一在回调函数中指向this的变量名，箭头函数中的this已经可以指向外层调用者，这个rule便失去了意义
-        //例如：[0,"that"]指定只能var that = this; that不能指向其他任何值，this也不能赋值给that以外的其他值
-        "consistent-this": [1, "that"],
+        //例如：[0,"widget"]指定只能var widget = this; widget不能指向其他任何值，this也不能赋值给widget以外的其他值
+        "consistent-this": [1, "widget"],
         //强制使用命名的function表达式
         "func-names": 0,
         //文件末尾强制换行
@@ -631,7 +631,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //强制在对象字面量的属性中键和值之间使用一致的间距
         "key-spacing": [2, {"beforeColon": false, "afterColon": true}],
         //强制使用一致的换行风格
-        "linebreak-style": [1, "unix"],
+        "linebreak-style": [1, "windows"],
         //要求在注释周围有空行（要求在块级注释之间有一空行）
         "lines-around-comment": [1, {"beforeBlockComment": true}],
         //强制一致地使用函数声明或函数表达式，方法定义风格
