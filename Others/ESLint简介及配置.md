@@ -658,7 +658,7 @@ IDEA的ESLint插件请查看[ESLint-plugin-for-IDEA](https://plugins.jetbrains.c
         //强制function定义中最多允许的参数数量（最多允许2个参数）
         "max-params": [1, 2],
         //强制function块中最多允许的语句数量
-        "max-statements": [1, 200],
+        "max-statements": [1, 100],
         //强制每一行中所允许的最大语句数量
         "max-statements-per-line": 0,
         //要求构造函数首字母大写（要求调用new操作符时有首字母大写的函数，允许调用首字母大写的函数时不使用new操作符）
