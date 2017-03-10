@@ -42,7 +42,7 @@ ESLint主要有以下特点
 
 **ESLint是依托在NodeJS之上的，要安装ESLint需要先安装NodeJS**，有两种方式安装 ESLint：全局安装和本地安装    
 
-<h3 id="2.1">本地安装</h3>
+<h3 id="2.1">2.1 本地安装</h3>
 
 本地安装前，需要配置package.json文件，用于记录已经安装完成的插件信息，可使用npm进行配置  
 ```javascript
@@ -70,12 +70,12 @@ $ ./node_modules/.bin/eslint yourfile.js
 ```  
 如下图所示    
 
-![runESLint]()     
+![ESLint-run]()     
 
 **注意**：使用本地安装的ESLint时，你使用的任何插件或可分享的配置也都必须在本地安装      
 **注意**：.eslintrc 放在项目根目录，则会应用到整个项目；如果子目录中也包含 .eslintrc 文件，则子目录会忽略根目录的配置文件，应用该目录中的配置文件。这样可以方便地对不同环境的代码应用不同的规则      
 
-<h3 id="2.2">全局安装</h3>
+<h3 id="2.2">2.2 全局安装</h3>
 
 如果想让ESLint适用于所有的项目，建议全局安装ESLint。你可以使用npm  
 ```javascript
@@ -121,7 +121,7 @@ ESLint支持几种格式的配置文件，如果同一个目录有多个配置�
 - Configuration Comments: 在所要验证的文件中，直接使用Javascript注释嵌套配置信息  
 - Configuration Files: 使用JavaScript、JSON或YAML文件，比如前面提到的.eslintrc文件，当然你也可以在package.json文件里添加eslintConfig字段，EsLint都会自动读取验证    
 
-<h4 id="3.1.1">parserOptions（指定解析器的选择）</h4>
+<h4 id="3.1.1">3.1.1 parserOptions（指定解析器的选择）</h4>
 
 EsLint通过parserOptions，允许指定校验的ecma的版本，及ecma的一些特性    
 ```javascript
@@ -145,7 +145,7 @@ ecmaFeatures-指示要使用哪些其他语言功能
 
 **注意**：JSX就是Javascript和XML结合的一种格式。React发明了JSX，利用HTML语法来创建虚拟DOM。当遇到<，JSX就当HTML解析，遇到{就当JavaScript解析    
 
-<h4 id="3.1.2">parser（指定解析器）</h4>
+<h4 id="3.1.2">3.1.2 parser（指定解析器）</h4>
 
 默认情况下，ESLint使用Espree作为其解析器，可以选择指定在配置文件中使用不同的解析器，只要解析器满足以下要求    
 - 它必须是本地安装的npm模块    
@@ -164,7 +164,7 @@ EsLint默认使用esprima做脚本解析，当然也可以切换他，比如切�
 
 当使用自定义解析器时，parserOptions仍然需要配置属性才能使ESLint和默认情况下不在ECMAScript5中的功能正常工作，解析器都通过parserOptions中的属性设置来确定需要启用哪些功能    
 
-<h4 id="3.1.3">environments（指定环境）</h4>
+<h4 id="3.1.3">3.1.3 environments（指定环境）</h4>
 
 environment可以预设好的其他环境的全局变量，如brower、node环境变量、es6环境变量、mocha环境变量等    
 ```javascript
@@ -212,7 +212,7 @@ environment可以预设好的其他环境的全局变量，如brower、node环�
 }
 ```    
 
-<h4 id="3.1.4">globals（指定全局变量）</h4>
+<h4 id="3.1.4">3.1.4 globals（指定全局变量）</h4>
 
 如果在文件中使用全局变量，则要指定相应的全局变量，这样ESLint就不会对其使用进行警告，在配置文件中配置全局变量，使用globals键，并指定要使用的全局变量，设置每个全局变量名称的属性    
 - true-允许覆盖变量    
@@ -227,7 +227,7 @@ environment可以预设好的其他环境的全局变量，如brower、node环�
 ```    
 以上例子允许var1在代码中覆盖，但不允许var2在代码中覆盖    
 
-<h4 id="3.1.5">plugins（配置插件）</h4>
+<h4 id="3.1.5">3.1.5 plugins（配置插件）</h4>
 
 如果想使用插件中的环境变量，可以使用plugins指定    
 ```javascript
@@ -246,7 +246,7 @@ environment可以预设好的其他环境的全局变量，如brower、node环�
 ESLint支持使用第三方插件，在使用插件之前，必须使用npm对其进行安装    
 **注意**：全局安装的ESLint实例只能使用全局安装的ESLint插件，本地安装的ESLint可以使用本地和全局安装的ESLint插件    
 
-<h4 id="3.1.6">rules（配置规则）</h4>
+<h4 id="3.1.6">3.1.6 rules（配置规则）</h4>
 
 自定义规则，一般格式："规则名称":error级别系数。系数0为不提示(off)、1为警告(warn)、2为错误抛出(error)，可指定范围，可以包括Strict模式、也可以是code的方式提醒，如符号等。还可以是第三方的校验，如react    
 ```javascript
