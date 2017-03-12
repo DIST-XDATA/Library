@@ -114,7 +114,7 @@ goog.provide('ol.Map.Layer');
 goog.provide('ol.MapBrowserEvent');
 goog.provide('ol.MapBrowserEventType');
 ```
-![Alt text](./1489218489283.png)
+![ol](img/0.png)
 - **直接依赖包加载**  
 所谓直接依赖，就是指在代码实现中有直接引用类或者对象的；  
 可以加载任意多个直接依赖的文件包；  
