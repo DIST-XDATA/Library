@@ -1,9 +1,9 @@
-#OpenLayers技术分析
-**[OpenLayers](https://openlayers.org/)**是一个高性能，功能丰富的库，满足您所有的映射需求。  
+#OpenLayers技术分析#
+**[OpenLayers](https://openlayers.org/)**是一个高性能，功能丰富的库，满足您所有的映射需求。  
 最新版本：4.0.1  
 使得在任何网页中放置动态地图变得容易， 它可以显示地图图块，矢量数据和从任何来源加载的标记，已经开发用于进一步使用各种地理信息。完全免费且开源的JavaScript库，根据2条款BSD许可证（也称为FreeBSD）发布。
 
-##特性
+#特性#
 - **多源数据支持**：
 对Google Maps，Yahoo， OSM，Bing，MapBox，微软Virtual Earth 和其他XYZ等多种来源的瓦片地图的支持；同时也能对GeoJSON、TopoJSON、KML、GML等多种地理矢量数据进行渲染；支持 以OGC 服务形式发布的地图数据加载。
 - **前沿技术及高效的渲染能力**：
@@ -39,13 +39,13 @@ OpenLayers源码托管在github上（https://github.com/openlayers/openlayers）
 **ol.Geolocation** 用于提供HTML5地理位置功能  
 **ol.Overlay** 在地图上显示并附加到单个地图位置的元素  
 - **事件**  
-**ol.events**注册（和注销）事件侦听器函数，当被调用时作为事件被调度的结果  
+**ol.events** 注册（和注销）事件侦听器函数，当被调用时作为事件被调度的结果  
 - **几何要素样式及渲染**  
 **ol.geom** 几何要素图形Circle、Geometry、GeometryCollection、LinearRing、LineString、MultiLineString、MultiPoint、MultiPolygon、Point、Polygon、SimpleGeometry  
 **ol.style** 定义要素样式  
 **ol.render** 将几何图形绘制到上下文的画布中  
 
-##扩展插件  
+#扩展插件#  
 通过扩展OpenLayers或与其集成来提供额外的功能  
 - **官方的插件**  
 [OL3-Cesium](https://github.com/openlayers/ol-cesium)：Cesium（开源JavaScript框架，多种数据可视化方式，可以绘制各种几何图形、导入图片，甚至3D模型，支持基于时间轴的动态数据展示）一体化整合  
@@ -74,7 +74,7 @@ OpenLayers源码托管在github上（https://github.com/openlayers/openlayers）
 [OL3-AnimatedCluster](https://github.com/Viglino/OL3-AnimatedCluster)：OpenLayers 3（OL3）的集群层，用于在缩放更改时对集群进行动画;以及选择交互，分散集群以允许在其中进行特征选择  
 [ol3-ember](https://github.com/bartvde/ol3-ember)：将OpenLayers 3与Ember.js组合的实验  
 
-##库设计规范  
+#库设计规范#  
 OpenLayers是基于Google Closure的JavaScript库，也采用了Google Closure的代码书写模式，可以配合Google开源了其内部使用的JavaScript开发工具—— Google Closure Tools可以创造出更快的富Web应用程序。  
 OpenLayers库的整个组织结构还是比较扁平简单的，没有太复杂的组织规划。  
 >说明：以下代码只是为了表达多种书写方式举例，不是OpenLayers库中真实写法。（虽然一个包中能声明多个类，但建议不要这样做，除非特殊情况。）
