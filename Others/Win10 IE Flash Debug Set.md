@@ -12,11 +12,11 @@
 ### 1.替换系统文件需要系统TrustedInstaller权限(此为系统最高权限，可以操作系统任何文件，请谨慎操作)，使用我提供的注册表可在右键菜单中添加获取最高权限的选项。
 ![获取最高权限](./img/getpower.png)
 ### 注册表合并后在文件右键菜单就会有一个获取权限的选项。
-![右键菜单](./img/右键菜单.png)
+![右键菜单](./img/rightclick.png)
 
 ### 2.获取win10系统中关于Flash的两个文件夹的最高权限，以便替换文件，文件路径分别为C:\Windows\System32\Macromed\Flash，C:\Windows\SysWOW64\Macromed\Flash，分别对应了32位和64位。替换其中的Flash.ocx文件即可。
 ![获取flash文件夹最高权限](./img/getpower1.png)
 ![32位文件路径](./img/32flashsrc.png)
 ![64位文件路径](./img/64flashsrc.png)
 
-### 注：win10会自动更新flash，每次flash更新后都要替换这两个文件，上述资源路径https://github.com/Hertz9409/Win10FlashDebugSet/tree/master/flash。
+### 注：win10会自动更新flash，每次flash更新后都要替换这两个文件，上述资源路径https://github.com/Hertz9409/Win10FlashDebugSet/tree/master/flash
