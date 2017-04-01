@@ -1,9 +1,9 @@
-#Leaflet技术分析
-**[Leaflet](http://leafletjs.com)**是一个用于移动友好交互式地图的开源JavaScript库。  
+# Leaflet技术分析 
+[Leaflet](http://leafletjs.com)是一个用于移动友好交互式地图的开源JavaScript库。  
 最新版本：1.0.3（2017/1/23）  
 轻量级，大约38kb的JS，具有大多数开发人员所需要的映射功能；设计简单、性能高可用，可以高效地在所有主要的桌面和移动平台上工作，在现代浏览器上会利用HTML5和CSS3的优势，同时也支持旧的浏览器访问；易扩展，且拥有大量的插件；易于使用、方便快捷开发，源码可读性高  。
 
-##特性  
+## 特性  
 - **多源数据支持**：
 Tile layers, WMS、Markers, Popups、Vector layers、Image overlays、GeoJSON。
 - **浏览器及移动设备的支持**：
@@ -21,7 +21,7 @@ Chrome、Firefox、 Safari 5+、Opera 12+、IE 7–11；
 强大的OOP，易于扩展；
 轻量级，没有外部依赖。
 
-##主要的API接口  
+## 主要的API接口  
 Leaflet源码托管在github上（https://github.com/Leaflet/Leaflet）  
 - **地图控制器**  
 地图的核心，包含了PanTo和缩放的动画；浏览器HTML5定位；地图的相关操作 控件图层，包含缩放、比例尺、属性等等。  
@@ -44,7 +44,7 @@ LatLng、LatLngBounds、Point、Bounds、Icon、DivIcon
 事件控制，地图投影和坐标，比如国内适配的墨卡托（UTM）投影。  
 Class、Evented、Layer、Interactive layer、Control、Handler、Projection、CRS、Renderer、Event objects、global switches、noConflict  
 
-##扩展插件  
+## 扩展插件  
 Leaflet强大的开源库插件涉及到地图应用的各个方面包括地图服务，数据提供，数据格式，地理编码，路线和路线搜索，地图控件和交互等类型的插件数百种。  
 - **官方的插件**  
 官方提供插件：[Leaflet plugins](http://leafletjs.com/plugins.html)  
@@ -73,5 +73,5 @@ Leaflet强大的开源库插件涉及到地图应用的各个方面包括地图�
 [react-leaflet](https://github.com/PaulLeCam/react-leaflet)：用于构建用户界面  
 [vue-leaflet](https://github.com/brandonxiang/vue-leaflet)：提供高效的数据绑定和灵活的组件系统  
 
-##库设计规范  
+## 库设计规范  
 没有外部依赖，使用原生的javascript，严格遵循了[ES6](http://es6.ruanyifeng.com/)规范。  
