@@ -1,5 +1,5 @@
 # OpenLayers技术分析  
-**[OpenLayers](https://openlayers.org/)**是一个高性能，功能丰富的库，满足您所有的映射需求。  
+[OpenLayers](https://openlayers.org/)是一个高性能，功能丰富的库，满足您所有的映射需求。  
 最新版本：4.0.1  
 使得在任何网页中放置动态地图变得容易， 它可以显示地图图块，矢量数据和从任何来源加载的标记，已经开发用于进一步使用各种地理信息。完全免费且开源的JavaScript库，根据2条款BSD许可证（也称为FreeBSD）发布。
 
