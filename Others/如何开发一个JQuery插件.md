@@ -66,8 +66,6 @@ var tallest = $('div').maxHeight(); // 返回最高 div 的高度
 这个简单的插件利用` .height()` 来返回页面中最高 div 的高度
 <h2 id='4'>保持 chainability</h2>
 前面的例子返回了页面上最高 div 的一个整数值，但很多时候插件只是以某种方式修改元素集合，并把它们传给调用链的下一个方法。 这正是 jQuery 设计的漂亮之处，也是它如此流行的原因之一。为保持插件的 chainability ，必须确保插件返回 this 关键字。
-<details>
- <summary style='color:blue'>示例代码</summary>
  
 ```javascript
 (function( $ ){
@@ -94,13 +92,10 @@ var tallest = $('div').maxHeight(); // 返回最高 div 的高度
 --
 $('div').lockDimensions('width').css('color', 'red');
 ```
-</details>
+
 
 <h2 id='5'>默认设置和选项</h2>
 对于那些提供许多选项、更复杂、更可配置的插件，最佳实践是提供一个默认设置，它可在插件调用时（通过 `$.extend`）被扩展。这样调用插件时无需大量参数， 只要一个对象参数，内容为你希望不同于默认值的那部分设置。做法如下：
-
-<details>
- <summary style='color:blue'>示例代码</summary>
  
 ```javascript
 (function( $ ){
@@ -127,7 +122,6 @@ $('div').tooltip({
   'location' : 'left'
 });    
 ```
-</details>
 
 在本例中，用给定选项调用 `tooltip` 插件后， 默认的 `location` 设置被覆盖为 `"left"`， 但 `bacground-color` 设置仍为默认值 `"blue"`。最终的设置对象看起来这样的：
 
@@ -164,9 +158,6 @@ $('div').tooltip({
 })( jQuery );
 ```
 这非常不好，因为它搞乱了 $.fn 名称空间。 要修正这个问题，你应该把所有插件方法收集到一个对象定义当中，并通过传递方法名称字符串调用.
-
-<details>
- <summary style='color:blue'>示例代码</summary>
  
 ```javascript
 (function( $ ){
@@ -217,7 +208,7 @@ $('div').tooltip('hide');
 // 调用 update 方法
 $('div').tooltip('update', 'This is the new tooltip content!');
 ```
-</details>
+
  
 这种插件架构使你可以在插件的父闭包中封装所有方法，调用时先传方法名称字符串，接下来再把你需要的其它参数传给该方法。这种封装和架构是 jQuery 插件社区的一个标准，已经被无数插件所使用，包括 jQueryUI 中的插件和小部件。
 
@@ -357,3 +348,24 @@ $('#fun').tooltip('destroy');
 * 不要传给插件大量参数，应该传一个可以覆盖插件默认选项的设置对象。
 * 在单个插件中，不要让一个以上的名称空间搞乱了 jQuery.fn 对象。
 * 总是为方法、事件和数据定义名称空间。
+
+最后附上一个推荐的JQuery 插件模板供参考：
+
+```javascript
+/*
+ * 插件注释开头写插件名称、版本、作者、描述等信息
+ * for example, for example:
+ * ------------------------------------------------------------------------
+ * jQuery-DistPlugin Version 0.1
+ * 一个jQuery插件模板
+ */
+ 
+ (function($, window, document, undefined) {
+    /**
+     * 将插件名称存放在变量中，方便后续修改插件名称（一般不会修改）
+     * @type {String}
+     */
+    var pluginName = 'distPlugin';
+    
+ })( jQuery, window, document );
+```
