@@ -66,7 +66,9 @@ var tallest = $('div').maxHeight(); // 返回最高 div 的高度
 这个简单的插件利用` .height()` 来返回页面中最高 div 的高度
 <h2 id='4'>保持 chainability</h2>
 前面的例子返回了页面上最高 div 的一个整数值，但很多时候插件只是以某种方式修改元素集合，并把它们传给调用链的下一个方法。 这正是 jQuery 设计的漂亮之处，也是它如此流行的原因之一。为保持插件的 chainability ，必须确保插件返回 this 关键字。
-
+<details>
+ <summary>示例代码</summary>
+ 
 ```javascript
 (function( $ ){
 
@@ -92,6 +94,8 @@ var tallest = $('div').maxHeight(); // 返回最高 div 的高度
 --
 $('div').lockDimensions('width').css('color', 'red');
 ```
+</details>
+
 <h2 id='5'>默认设置和选项</h2>
 对于那些提供许多选项、更复杂、更可配置的插件，最佳实践是提供一个默认设置，它可在插件调用时（通过 `$.extend`）被扩展。这样调用插件时无需大量参数， 只要一个对象参数，内容为你希望不同于默认值的那部分设置。做法如下：
 
