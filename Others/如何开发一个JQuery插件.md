@@ -357,15 +357,215 @@ $('#fun').tooltip('destroy');
  * for example, for example:
  * ------------------------------------------------------------------------
  * jQuery-DistPlugin Version 0.1
+ * Created by LancerSung on 2017/4/7
  * 一个jQuery插件模板
+ *
  */
- 
- (function($, window, document, undefined) {
+
+(function($, window, document, undefined) {
+
     /**
-     * 将插件名称存放在变量中，方便后续修改插件名称（一般不会修改）
-     * @type {String}
+     * 将插件名称存放在变量中，方便后续修改插件名称（一般不会修改）
+     * @type {String}
      */
-    var pluginName = 'distPlugin';
-    
- })( jQuery, window, document );
+    var pluginName = 'distPlugin';
+
+    /**
+     * 插件构造函数
+     * @param {DOM Element} element --插件挂载的DOM元素
+     * @param {Object} options --传给构造函数的参数
+     */
+    function Plugin(element, options) {
+
+        // 存储原始元素
+        this.el = element;
+
+        // 存储jquery对象
+        this.$el = $(element);
+
+        //构造一个设置对象，包含默认设置以及用户自定义设置
+        this.options = $.extend({}, $.fn[pluginName].defaults, options);
+
+        // 初始化插件实例
+        this.init();
+    }
+
+    /**
+     * 用必要的方法来设置插件原型
+     * 最佳实践是在原型中实现‘init'和‘destroy’方法
+     */
+    $.extend(Plugin.prototype, {
+
+        /**
+         * 初始化插件实例.
+         * 设置相关属性, 存储相关节点引用, 添加监听事件等
+         *
+         * 当为插件绑定事件时，最好为其定义名称空间
+         * 元素可能在同一事件类型上绑定多个监听
+         * 这样，回头想 unbind 的时候就不会影响到相同事件类型上的其它已绑定监听
+         *
+         * @example
+         * this.$someSubElement.on('click.' + pluginName, function() {
+         *      // 逻辑处理
+         * });
+         *
+         */
+        init: function() {
+
+            // this._bindEvents();
+        },
+
+        /**
+         *  'destroy' 方法用来销毁插件，释放插件占用的资源，移除相关事件监听…
+         *
+         * 记得‘unbind’你绑定的事件监听
+         *
+         * @example
+         * this.$someSubElement.off('.' + pluginName);
+         *
+         * 上面这个例子是用来解除插件相关的所有监听
+         *
+         */
+        destroy: function() {
+            //解除绑定
+            //this._unbindEvents();
+
+            // 移除所有插件绑定的数据
+            this.$el.removeData();
+        },
+
+        /**
+         * 编写插件的公有方法
+         * 公有方法可以像下面这么调用：
+         *
+         * @example
+         * $('#element').distPlugin('somePublicMethod', 'Here', 1001);
+         *
+         * @param  {[type]} foo [some parameter]
+         * @param  {[type]} bar [some other parameter]
+         * @return {[type]}
+         */
+        somePublicMethod: function(foo, bar) {
+
+            // 调用原型内部的私有方法（伪私有）
+            this._pseudoPrivateMethod();
+
+            // 调用原型外部的私有方法（真私有），使用call或者apply来调用
+            _privateMethod.call(this);
+        },
+
+        /**
+         * 用来实现类似getter 方法的公有方法.
+         * 可以像调用普通共有函数一样调用:
+         *
+         * @example
+         * $('#element').jqueryPlugin('someGetterMethod');
+         *
+         * 来获取某些对插件的调用者来说有用的信息
+         *
+         * @return {[type]} Return something
+         */
+        someGetterMethod: function() {
+
+        },
+
+        /**
+         * 以下划线来命名函数标明它是私有方法，
+         * 通过插件内部的逻辑处理带下划线的函数将无法在外部直接调用
+         * for example:
+         *
+         *  @example
+         *  $('#element').jqueryPlugin('_pseudoPrivateMethod');  // 外部调用这个函数将不会被执行
+         */
+        _pseudoPrivateMethod: function() {
+
+        }
+
+        /***
+         * 绑定事件
+         */
+        /*
+         *  _bindEvents: function() {
+         *    var plugin = this;
+         *    plugin.$el.on('click'+'.'+pluginName, function() {
+         *      _privateMethod.call(plugin);
+         *    }
+         *  }
+         */
+        /***
+         * 解除事件绑定
+         */
+        /*
+        *_unbindEvents: function() {
+        *   this.$el.off('.'+pluginName);
+        * }
+        *
+        *
+         */
+
+    });
+
+    /**
+     * 这是个私有函数. 只有插件实例对象可以调用它
+     * @return {[type]}
+     */
+    var _privateMethod = function() {
+        console.log("privateMethod");
+        console.log(this);
+    };
+
+    /**
+     * 拓展Jquery插件
+     * 使用data避免插件在给定元素上做重复初始化
+     * 对含有下划线的方法过滤阻止外部调用
+     * @example
+     * $('#element').jqueryPlugin({
+     *     defaultOption: 'this options overrides a default plugin option',
+     *     additionalOption: 'this is a new option'
+     * });
+     */
+    $.fn[pluginName] = function(options) {
+        var args = arguments;
+
+        if (options === undefined || typeof options === 'object') {
+            // 创建一个插件实例, 遍历选中的节点, 并将创建的插件实例保存至节点的data中
+            this.each(function() {
+                if (!$.data(this, 'plugin_' + pluginName)) {
+                    $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
+                }
+            });
+            return this;
+        } else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {
+            //在选中的节点上调用公共方法
+            if (Array.prototype.slice.call(args, 1).length == 0 && $.inArray(options, $.fn[pluginName].getters) != -1) {
+                //调用类getter方法，这样链式调用则被破坏会返回某个感兴趣的值而非jquery对象
+                var instance = $.data(this[0], 'plugin_' + pluginName);
+                return instance[options].apply(instance, Array.prototype.slice.call(args, 1));
+            } else {
+                // 在节点上调用指定的方法
+                this.each(function() {
+                    var instance = $.data(this, 'plugin_' + pluginName);
+                    if (instance instanceof Plugin && typeof instance[options] === 'function') {
+                        instance[options].apply(instance, Array.prototype.slice.call(args, 1));
+                    }
+                });
+                return this;
+            }
+        }
+    };
+
+    /**
+     * 指定这个插件的getter方法
+     * @type {Array}
+     */
+    $.fn[pluginName].getters = ['someGetterMethod'];
+
+    /**
+     * 默认配置
+     */
+    $.fn[pluginName].defaults = {
+        defaultOption: "I'm a default option"
+    };
+
+})(jQuery, window, document);
 ```
