@@ -459,7 +459,7 @@ $('#fun').tooltip('destroy');
          * 可以像调用普通共有函数一样调用:
          *
          * @example
-         * $('#element').jqueryPlugin('someGetterMethod');
+         * $('#element').distPlugin('someGetterMethod');
          *
          * 来获取某些对插件的调用者来说有用的信息
          *
@@ -475,7 +475,7 @@ $('#fun').tooltip('destroy');
          * for example:
          *
          *  @example
-         *  $('#element').jqueryPlugin('_pseudoPrivateMethod');  // 外部调用这个函数将不会被执行
+         *  $('#element').distPlugin('_pseudoPrivateMethod');  // 外部调用这个函数将不会被执行
          */
         _pseudoPrivateMethod: function() {
 
@@ -519,7 +519,7 @@ $('#fun').tooltip('destroy');
      * 使用data避免插件在给定元素上做重复初始化
      * 对含有下划线的方法过滤阻止外部调用
      * @example
-     * $('#element').jqueryPlugin({
+     * $('#element').distPlugin({
      *     defaultOption: 'this options overrides a default plugin option',
      *     additionalOption: 'this is a new option'
      * });
