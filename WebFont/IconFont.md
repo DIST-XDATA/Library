@@ -55,7 +55,11 @@ IcoMoon！一个可以通过个性化设置来创建自定义图标（字体）�
 复制完成后，在CSS文件中找到@font-face，将URL路径修改成你本地的相对路径。
 ![](img/css.png)
 
-字体和路径都设置完成后，在HTML页面只需调用相对应的class就可以了。如果想兼容IE7浏览器，需引用IE7目录的js。如：
+
+字体和路径都设置完成后，在HTML页面只需调用相对应的class就可以了。
 
 调用class：<span class="icon icon-add"></span>
+
+如果想兼容IE7浏览器，需引用IE7目录的js。如：
+
 调用js：<script src="ie7/ie7.js"></script>
