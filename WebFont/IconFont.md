@@ -58,8 +58,8 @@ IcoMoon！一个可以通过个性化设置来创建自定义图标（字体）�
 
 字体和路径都设置完成后，在HTML页面只需调用相对应的class就可以了。
 
-调用class：<span class="icon icon-add"></span>
+调用class：`<span class="icon icon-add"></span>`
 
 如果想兼容IE7浏览器，需引用IE7目录的js。如：
 
-调用js：<script src="ie7/ie7.js"></script>
+调用js：`<script src="ie7/ie7.js"></script>`
